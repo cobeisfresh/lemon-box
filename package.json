@@ -1,0 +1,19 @@
+{
+  "name": "@cobe/lemon-box",
+  "version": "0.1.0",
+  "description": "Web utilities and services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cobeisfresh/lemon-box.git"
+  },
+  "author": "COBE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cobeisfresh/lemon-box/issues"
+  },
+  "homepage": "https://github.com/cobeisfresh/lemon-box#readme"
+}
