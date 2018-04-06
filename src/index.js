@@ -1,4 +1,6 @@
-function x () {
-    console.log("Testing")
+// @flow
+import Storage from 'src/services/storage/Storage'
+
+export {
+    Storage
 }
-export default x
