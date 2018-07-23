@@ -1,7 +1,7 @@
 // @flow
 export type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE'
 
-export type Schema = {
+export type NetworkSchema = {
     method: RequestMethod,
     url: string,
     data?: any,

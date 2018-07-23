@@ -33,7 +33,7 @@ class Storage implements StorageInterface {
         this.storage.removeItem(key)
     }
 
-    clear = () => {
+    clear() {
         this.storage.clear()
     }
 

@@ -1,9 +1,9 @@
 // @flow
 import axios from 'axios'
-import type {Schema} from 'services/network/Schema'
+import type {NetworkSchema} from 'services/network/NetworkSchema'
 
 export interface NetworkServiceInterface {
-    makeRequest(requestSchema: Schema): Promise<any>,
+    makeRequest(requestSchema: NetworkSchema): Promise<any>,
     setRequestInterceptor(interceptor: Function): void,
     setResponseInterceptor(interceptor: Function): void,
     ejectRequestInterceptor(): void,
@@ -35,7 +35,7 @@ class Network implements NetworkServiceInterface {
         this.axiosInstance.request.eject(this.responseInterceptor)
     }
 
-    makeRequest(requestSchema: Schema): Promise<any> {
+    makeRequest(requestSchema: NetworkSchema): Promise<any> {
         return this.axiosInstance.request(requestSchema)
     }
 }

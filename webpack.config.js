@@ -1,4 +1,5 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path')
 
 module.exports = {
@@ -21,6 +22,14 @@ module.exports = {
     resolve: {
         modules: [path.resolve(__dirname), 'node_modules'],
     },
+    externals: {
+        axios: 'axios'
+    },
+    plugins: [
+        new CleanWebpackPlugin([
+            path.resolve(__dirname, 'lib')
+        ])
+    ],
     optimization: {
         minimizer: [
             new UglifyJsPlugin({

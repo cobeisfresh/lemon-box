@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack --mode=development --watch",
-    "build": "webpack --mode=production",
+    "build": "webpack --mode=production && flow-copy-source services lib",
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,13 +21,15 @@
   "homepage": "https://github.com/cobeisfresh/lemon-box#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.69.0",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14"
+    "clean-webpack-plugin": "^0.1.19",
+    "flow-bin": "^0.77.0",
+    "flow-copy-source": "^2.0.2",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
   },
   "dependencies": {
     "axios": "^0.18.0"
