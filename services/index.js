@@ -7,8 +7,11 @@ import type {NetworkSchema} from 'services/network/NetworkSchema'
 
 export {
     Network,
-    NetworkSchema,
     Storage,
     Authorization,
     Authentication
+}
+
+export type {
+    NetworkSchema
 }
