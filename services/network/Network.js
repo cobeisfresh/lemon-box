@@ -11,32 +11,39 @@ export interface NetworkServiceInterface {
 }
 
 class Network implements NetworkServiceInterface {
-    axiosInstance: Object
+    httpClient: Object
     requestInterceptor: Function
     responseInterceptor: Function
 
+    static methods = {
+        GET: 'GET',
+        POST: 'POST',
+        PUT: 'PUT',
+        DELETE: 'DELETE'
+    }
+
     constructor(baseURL: string) {
-        this.axiosInstance = axios.create({baseURL})
+        this.httpClient = axios.create({baseURL})
     }
 
     setRequestInterceptor(interceptor: Function, errorInterceptor?: Function) {
-        this.requestInterceptor = this.axiosInstance.interceptors.request.use(interceptor, errorInterceptor)
+        this.requestInterceptor = this.httpClient.interceptors.request.use(interceptor, errorInterceptor)
     }
 
     setResponseInterceptor(interceptor: Function, errorInterceptor?: Function) {
-        this.responseInterceptor = this.axiosInstance.interceptors.response.use(interceptor, errorInterceptor)
+        this.responseInterceptor = this.httpClient.interceptors.response.use(interceptor, errorInterceptor)
     }
 
     ejectRequestInterceptor() {
-        this.axiosInstance.request.eject(this.requestInterceptor)
+        this.httpClient.request.eject(this.requestInterceptor)
     }
 
     ejectResponseInterceptor() {
-        this.axiosInstance.request.eject(this.responseInterceptor)
+        this.httpClient.request.eject(this.responseInterceptor)
     }
 
     makeRequest(requestSchema: NetworkSchema): Promise<any> {
-        return this.axiosInstance.request(requestSchema)
+        return this.httpClient.request(requestSchema)
     }
 }
 
