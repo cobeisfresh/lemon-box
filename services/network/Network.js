@@ -1,6 +1,6 @@
 // @flow
 import axios from 'axios'
-import type {NetworkSchema} from 'services/network/NetworkSchema'
+import type {NetworkSchema} from './NetworkSchema'
 
 export interface NetworkServiceInterface {
     makeRequest(requestSchema: NetworkSchema): Promise<any>,

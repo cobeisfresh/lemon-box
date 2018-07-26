@@ -1,5 +1,5 @@
 // @flow
-import type {StorageInterface} from 'services/storage/StorageInterface'
+import type {StorageInterface} from './StorageInterface'
 
 class Storage implements StorageInterface {
     storage = localStorage
