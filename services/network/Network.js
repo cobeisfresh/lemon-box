@@ -2,7 +2,7 @@
 import axios from 'axios'
 import type {NetworkSchema} from './NetworkSchema'
 
-export interface NetworkServiceInterface {
+export interface NetworkInterface {
     makeRequest(requestSchema: NetworkSchema): Promise<any>,
     setRequestInterceptor(interceptor: Function): void,
     setResponseInterceptor(interceptor: Function): void,
@@ -10,7 +10,7 @@ export interface NetworkServiceInterface {
     ejectResponseInterceptor(): void
 }
 
-class Network implements NetworkServiceInterface {
+class Network implements NetworkInterface {
     httpClient: Object
     requestInterceptor: Function
     responseInterceptor: Function
