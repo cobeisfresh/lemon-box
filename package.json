@@ -1,6 +1,6 @@
 {
   "name": "@cobe/lemon-box",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Web utilities and services",
   "main": "lib/index.js",
   "scripts": {
