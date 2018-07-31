@@ -1,5 +1,5 @@
 // @flow
-import type {StorageInterface} from '../storage/StorageInterface'
+import type {StorageInterface} from '../storage/Storage'
 
 export type Action = {
     roles: string[]
