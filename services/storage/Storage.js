@@ -11,10 +11,6 @@ class Storage implements StorageInterface {
     storage = localStorage
 
     constructor (storage: any) {
-        if (storage !== localStorage || storage !== sessionStorage) {
-            throw Error('Invalid storage provided. Provide localStorage or sessionStorage.')
-        }
-
         this.storage = storage
     }
 
