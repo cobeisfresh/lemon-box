@@ -22,8 +22,8 @@ class Network implements NetworkInterface {
         DELETE: 'DELETE'
     }
 
-    constructor(baseURL: string) {
-        this.httpClient = axios.create({baseURL})
+    constructor(baseURL: string, options: Object = {}) {
+        this.httpClient = axios.create({baseURL, ...options})
     }
 
     setRequestInterceptor(interceptor: Function, errorInterceptor?: Function) {
