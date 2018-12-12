@@ -21,7 +21,6 @@ class Authorization implements AuthorizationInterface {
 
     /**
      * Save user roles to storage
-     * @param {String[]} user roles
      */
     persistRoles = (roles: string[]) => {
         this.storage.set(this.storageRoleKey, roles)
