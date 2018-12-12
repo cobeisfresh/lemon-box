@@ -1,6 +1,6 @@
 {
   "name": "@cobe/lemon-box",
-  "version": "0.6.10",
+  "version": "0.6.11",
   "description": "Web utilities and services",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.js.flow",
