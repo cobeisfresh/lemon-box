@@ -4,8 +4,8 @@ import type {NetworkSchema} from './NetworkSchema'
 
 export interface NetworkInterface {
     makeRequest(requestSchema: NetworkSchema): Promise<any>,
-    setRequestInterceptor(interceptor: Function): void,
-    setResponseInterceptor(interceptor: Function): void,
+    setRequestInterceptor(interceptor: Function, errorInterceptor?: Function): void,
+    setResponseInterceptor(interceptor: Function, errorInterceptor?: Function): void,
     ejectRequestInterceptor(): void,
     ejectResponseInterceptor(): void
 }
